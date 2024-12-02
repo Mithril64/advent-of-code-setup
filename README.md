@@ -18,10 +18,10 @@ This comprehensive script automates the entire setup process for Advent of Code,
 ### Obtaining Session Token
 
 1. Login to Advent of Code (via GitHub or other method)
-2. Open browser's developer console (Right-click → Inspect)
-3. Navigate to the Network tab
-4. GET any input page (e.g., `adventofcode.com/2016/day/1/input`)
-5. Locate the session token in request headers
+2. Open browser's developer console (Right-click → Inspect) / Press `F12`
+3. Navigate to the Application tab
+4. Open Storage > Cookies
+5. Locate the session token next to the name `session`
 
 ## ✨ Features
 
