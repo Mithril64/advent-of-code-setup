@@ -9,10 +9,10 @@ This script automates the setup for Advent of Code for any year by:
 
 - **Linux/macOS** (or Windows with WSL).
 - `curl` installed.
-- Advent of Code session token.
-    1 - Login on AoC with github or whatever
-    2 - Open browser's developer console (e.g. right click --> Inspect) and navigate to the Network tab
-    3 - GET any input page, say adventofcode.com/2016/day/1/input, and look in the request headers.
+- Advent of Code session token.\
+    1 - Login on AoC with github or whatever\
+    2 - Open browser's developer console (e.g. right click --> Inspect) and navigate to the Network tab\
+    3 - GET any input page, say adventofcode.com/2016/day/1/input, and look in the request headers.\
 
 ## Features
 
@@ -27,20 +27,20 @@ This script automates the setup for Advent of Code for any year by:
    git clone https://github.com/your-username/advent-of-code-setup.git
    cd advent-of-code-setup
    ```
-2. Copy the `.env.example` file to `.env` and add your session token:
+2. Copy the `.env.example` file to `.env` and add your session token:\
     ```bash
     cp .env.example .env
     ```
-Replace `your-session-token-here` with your `aoc` token.
-3. Make the setup script executable:
+Replace `your-session-token-here` with your `aoc` token.\
+3. Make the setup script executable:\
     ```bash
     chmod +x setup.sh
-    ```
-4. Run the setup script:
+    ```\
+4. Run the setup script:\
     ```bash
     ./setup.sh
-    ```
-You will be prompted to specify the year or use the current year.
+    ```\
+You will be prompted to specify the year or use the current year.\
 
 
 ## Example Directory Structure
