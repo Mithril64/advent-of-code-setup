@@ -1,65 +1,95 @@
-# Universal Advent of Code Setup Script
+# 🎄 Universal Advent of Code Setup Script
 
-This script automates the setup for Advent of Code for any year by:
-- Creating directories for each day (e.g., `day1/part1`, `day1/part2`).
-- Fetching inputs for each day from the Advent of Code website.
-- Adding a daily cron job to set up new days at midnight New York time (5:00 UTC).
+## Overview
 
-## Requirements
+This comprehensive script automates the entire setup process for Advent of Code, supporting any year with a robust, flexible approach to preparing your coding environment.
 
-- **Linux/macOS** (or Windows with WSL).
-- `curl` installed.  
-- Advent of Code session token.  
-    1 - Login on AoC with github or whatever  
-    2 - Open browser's developer console (e.g. right click --> Inspect) and navigate to the Network tab  
-    3 - GET any input page, say adventofcode.com/2016/day/1/input, and look in the request headers.  
+## 🛠 Requirements
 
-## Features
+- **Supported Platforms**: 
+  - Linux
+  - macOS
+  - Windows (with WSL)
 
-- **Supports Any Year**: Dynamically determines the year or lets you specify one.
-- **Handles Current and Past Years**: Automatically stops at Day 25 for past years.
-- **Customizable Template**: Uses a `template.cpp` file for solutions.
+- **Prerequisites**:
+  - `curl` installed
+  - Advent of Code session token
 
-## Setup Instructions
+### Obtaining Session Token
 
-1. Clone the repository:  
-   ```bash
-   git clone https://github.com/your-username/advent-of-code-setup.git
-   cd advent-of-code-setup
-   ```  
-2. Copy the `.env.example` file to `.env` and add your session token:  
-    ```bash
-    cp .env.example .env
-    ```  
-Replace `your-session-token-here` with your `aoc` token.  
-3. Make the setup script executable:  
-    ```bash
-    chmod +x setup.sh
-    ```  
-4. Run the setup script:  
-    ```bash
-    ./setup.sh
-    ```  
-You will be prompted to specify the year or use the current year.  
+1. Login to Advent of Code (via GitHub or other method)
+2. Open browser's developer console (Right-click → Inspect)
+3. Navigate to the Network tab
+4. GET any input page (e.g., `adventofcode.com/2016/day/1/input`)
+5. Locate the session token in request headers
 
+## ✨ Features
 
-## Example Directory Structure
-After running the script, your directory will look like this:  
-```bash  
-    advent-of-code-setup
-    ├── day1
-    │   ├── input.txt
-    │   ├── part1
-    │   │   └── solution.cpp
-    │   └── part2
-    │       └── solution.cpp
-    ├── day2
-    │   ├── input.txt
-    │   ├── part1
-    │   │   └── solution.cpp
-    │   └── part2
-    │       └── solution.cpp
-    ├── setup.sh
-    ├── template.cpp
-    └── .env
+- **Flexible Year Support**
+  - Dynamically determine current year
+  - Manual year specification
+  - Automatic cutoff at Day 25 for past years
+
+- **Automated Setup**
+  - Creates daily directory structures
+  - Fetches problem inputs automatically
+  - Uses customizable solution template
+
+## 📦 Installation & Setup
+
+### 1. Clone Repository
+```bash
+git clone https://github.com/Mithril64/advent-of-code-setup.git
+cd advent-of-code-setup
+```
+
+### 2. Configure Environment
+```bash
+cp .env.example .env
+```
+Replace `your-session-token-here` with your actual Advent of Code session token.
+
+### 3. Make Script Executable
+```bash
+chmod +x setup.sh
+```
+
+### 4. Run Setup
+```bash
+./setup.sh
+```
+Follow the interactive prompts to specify the year (or use the current year by default).
+
+## 🗂 Resulting Directory Structure
+
+```
+advent-of-code-setup/
+│
+├── day1/
+│   ├── input.txt
+│   ├── part1/
+│   │   └── solution.cpp
+│   └── part2/
+│       └── solution.cpp
+│
+├── day2/
+│   ├── input.txt
+│   ├── part1/
+│   │   └── solution.cpp
+│   └── part2/
+│       └── solution.cpp
+│
+├── setup.sh
+├── template.cpp
+└── .env
+```
+
+## 🚀 Additional Notes
+
+- The script uses a `template.cpp` for solution files
+- Includes a nightly cron job to set up new days at midnight New York time (5:00 UTC)
+
+## 🤝 Contributing
+
+Feel free to open issues or submit pull requests to improve this setup script!
 ```
