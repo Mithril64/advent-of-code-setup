@@ -12,8 +12,8 @@ const ll INF = 1e18;
 
 #define all(v) (v).begin(), (v).end()
 #define rall(v) (v).rbegin(), (v).rend()
-#define pb push_back()
-#define mp make_pair()
+#define pb(vect, val) vect.push_back(val)
+#define mp make_pair
 #define F first
 #define S second
 
